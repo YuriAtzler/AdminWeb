@@ -22,10 +22,8 @@ function ChatPage() {
   const { data } = location.state;
   const [messageText, setMessageText] = useState("");
   const [chat, setChat] = useState([]);
-  // [chatOn, setChatOn] = useState(false);
 
   useEffect(() => {
-    //if (!chatOn) {
     socket.emit(
       "select_room",
       {
@@ -33,22 +31,16 @@ function ChatPage() {
         room: data._id,
       },
       (messages) => {
-        //console.log("data " + messages);
         setChat(messages);
-        //setChatOn(true);
       }
     );
-    //}
-  });
+  }, []);
 
-  // useEffect(() => {
-  //   if (chatOn) {
-  //     socket.on("message", ({ data }) => {
-  //       console.log(data);
-  //       //setChat(data);
-  //     });
-  //   }
-  // }, [chatOn]);
+  useEffect(() => {
+    socket.on("message", (data) => {
+      setChat(data);
+    });
+  });
 
   function sendMessage() {
     socket.emit("message", {

@@ -25,11 +25,6 @@ function Orders(data) {
         <TextItems>{data.data.created_at}</TextItems>
       </ContainerItems>
       <ContainerButtons>
-        {/* <button>
-          <Link to={"/order/chat"} state={{ data: data.data }}>
-            Chat
-          </Link>
-        </button> */}
         <BntChat to={"/order/chat"} state={{ data: data.data }}>
           <p>Chat</p>
         </BntChat>
