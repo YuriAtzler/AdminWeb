@@ -33,7 +33,7 @@ function Orders(data) {
         <BntChat to={"/order/chat"} state={{ data: data.data }}>
           <p>Chat</p>
         </BntChat>
-        <BntFinish onClick={() => alert("you gay")}>
+        <BntFinish onClick={() => alert("ainda em produção")}>
           <p>Finalizar</p>
         </BntFinish>
       </ContainerButtons>
