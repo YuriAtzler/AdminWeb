@@ -8,6 +8,8 @@ import {
   LinkStyle,
 } from "./style";
 
+import { useAuth } from "../../hooks/useAuth";
+
 import background from "../../assets/images/backgroundMenu.jpg";
 import logo from "../../assets/images/logo.jpg";
 import coffee from "../../assets/icons/coffee.svg";
@@ -27,6 +29,8 @@ const styleLogo = {
 };
 
 function MenuBar() {
+  const { signOut } = useAuth();
+
   return (
     <DivMain>
       <HeaderMenu style={styleImage}>
@@ -66,7 +70,7 @@ function MenuBar() {
         </HeaderTitle>
         <LinkStyle to={"/notification/send"}>Mandar Notificações</LinkStyle>
       </ContainerProdutos>
-      <Logout>Logout</Logout>
+      <Logout onClick={signOut}>Logout</Logout>
     </DivMain>
   );
 }

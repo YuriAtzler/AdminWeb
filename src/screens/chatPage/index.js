@@ -12,7 +12,7 @@ import io from "socket.io-client";
 import MenuBar from "../../components/menuBar";
 
 import Message from "../../components/message";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const ENDPOINT = "https://recantocafeapp.herokuapp.com";
 const socket = io(ENDPOINT);

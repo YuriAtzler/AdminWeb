@@ -63,6 +63,11 @@ const Logout = styled.p`
   height: 30px;
   color: white;
   font-size: 20px;
+
+  :hover {
+    cursor: pointer;
+    color: #d2ab67;
+  }
 `;
 
 const LinkStyle = styled(Link)`

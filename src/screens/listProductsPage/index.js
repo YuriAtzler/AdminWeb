@@ -5,7 +5,6 @@ import {
   ContainerList,
   HeaderOptions,
   HeaderInfos,
-  ContainerFooter,
 } from "./style";
 import { useGetApi } from "../../hooks/useGetApi";
 
@@ -36,7 +35,6 @@ function ListProductsPage() {
             return <Products data={item} />;
           })}
         </ContainerList>
-        <ContainerFooter></ContainerFooter>
       </ContainerScreens>
     </Container>
   );

@@ -9,7 +9,7 @@ import {
 } from "./style";
 import { useGetApi } from "../../hooks/useGetApi";
 
-import Orders from "../../components/orders";
+import OrdersHistory from "../../components/orders/ordersHistory";
 import MenuBar from "../../components/menuBar";
 
 function ListHistoricOrderPage() {
@@ -26,18 +26,16 @@ function ListHistoricOrderPage() {
           <HeaderInfos>
             <p>Cliente</p>
             <p>Valor</p>
-            <p>Status</p>
             <p>Data</p>
-            <p>Opções</p>
+            <p>Excluir</p>
           </HeaderInfos>
         </ContainerHeader>
         <ContainerList>
           {isFetching && <p>carregando...</p>}
           {data?.map((item) => {
-            return <Orders data={item} />;
+            return <OrdersHistory data={item} />;
           })}
         </ContainerList>
-        <ContainerFooter></ContainerFooter>
       </ContainerScreens>
     </Container>
   );

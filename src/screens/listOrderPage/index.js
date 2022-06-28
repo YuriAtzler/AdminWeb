@@ -5,10 +5,10 @@ import {
   ContainerList,
   HeaderOptions,
   HeaderInfos,
-  ContainerFooter,
 } from "./style";
 import { useGetApi } from "../../hooks/useGetApi";
 
+import OrdersProgress from "../../components/orders/ordersProgress";
 import Orders from "../../components/orders";
 import MenuBar from "../../components/menuBar";
 
@@ -26,7 +26,6 @@ function ListOrderPage() {
           <HeaderInfos>
             <p>Cliente</p>
             <p>Valor</p>
-            <p>Status</p>
             <p>Data</p>
             <p>Opções</p>
           </HeaderInfos>
@@ -34,10 +33,9 @@ function ListOrderPage() {
         <ContainerList>
           {isFetching && <p>carregando...</p>}
           {data?.map((item) => {
-            return <Orders data={item} />;
+            return <OrdersProgress data={item} />;
           })}
         </ContainerList>
-        <ContainerFooter></ContainerFooter>
       </ContainerScreens>
     </Container>
   );

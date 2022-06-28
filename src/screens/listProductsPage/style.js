@@ -68,16 +68,8 @@ const ContainerList = styled.div`
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  height: 70%;
   overflow: scroll;
   margin: auto;
-`;
-
-const ContainerFooter = styled.div`
-  width: 100%;
-  height: 7%;
-  background-color: #333;
-  box-shadow: 0px 0px 10px #444;
 `;
 
 export {
@@ -87,5 +79,4 @@ export {
   ContainerList,
   HeaderOptions,
   HeaderInfos,
-  ContainerFooter,
 };

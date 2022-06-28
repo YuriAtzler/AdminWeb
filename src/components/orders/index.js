@@ -7,7 +7,7 @@ import {
   BntChat,
 } from "./style";
 
-import { Link } from "react-router-dom";
+import FinishOrder from "../../services/finishOrder";
 
 function Orders(data) {
   return (
@@ -28,7 +28,7 @@ function Orders(data) {
         <BntChat to={"/order/chat"} state={{ data: data.data }}>
           <p>Chat</p>
         </BntChat>
-        <BntFinish onClick={() => alert("ainda em produção")}>
+        <BntFinish onClick={() => FinishOrder(data.data._id)}>
           <p>Finalizar</p>
         </BntFinish>
       </ContainerButtons>

@@ -43,13 +43,12 @@ const HeaderInfos = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 90%;
   height: 30%;
-  background-color: #444;
 
   p {
     display: flex;
-    width: 18%;
+    width: 25%;
     height: 70%;
     justify-content: center;
     align-items: center;
@@ -69,16 +68,8 @@ const ContainerList = styled.div`
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  height: 70%;
   overflow: scroll;
-  margin: auto;
-`;
-
-const ContainerFooter = styled.div`
-  width: 100%;
-  height: 7%;
-  background-color: #333;
-  box-shadow: 0px 0px 10px #444;
+  margin-top: 10px;
 `;
 
 export {
@@ -88,5 +79,4 @@ export {
   ContainerList,
   HeaderOptions,
   HeaderInfos,
-  ContainerFooter,
 };
